@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+ <head>
+ <title>GARDEN CREATURES</title>
+ <marquee>Browse, buy and even get quotes now!</marquee>
+ <link rel="stylesheet" type="text/css" href="service1.css" /> 
+ <meta name="description" content="Gardens Store provides perfect lawns." />
+ <meta name="keywords" content="Lawns,Gardens,Flowers" />
+ 
+ <script type="text/javascript">
+function startTime()
+{
+var today=new Date();
+var h=today.getHours();
+var m=today.getMinutes();
+var s=today.getSeconds();
+// add a zero in front of numbers<10
+m=checkTime(m);
+s=checkTime(s);
+document.getElementById('MyClock').innerHTML=h+":"+m+":"+s;
+t=setTimeout('startTime()',500);
+}
+
+function checkTime(i)
+{
+if (i<10)
+  {
+  i="0" + i;
+  }
+return i;
+}
+</script>
+
+ </head>
+ 
+ <!-- All html has to go in the Body, ie: Nav menu's. -->
+ 
+<body>
+ 
+<div id="Containerwhole">
+
+<div class="middle_box">
+<h1>Garden Creatures</h1>
+<div ul id="navbar">
+	<li><a href="index.htm" class="nav" accesskey="1" title="Home">Home</a></li>
+	<li><a href="services.htm" class="nav" accesskey="2" title="Services">Services</a><ul>
+		<li><a href="service1.htm" class="nav" accesskey="5" title="Lawn Care">Lawn Care</a></li>
+		<li><a href="service2.htm" class="nav" accesskey="6" title="Flowers">Flowers</a></li>
+		<li><a href="service3.htm" class="nav" accesskey="7" title="Garden Creatures">Garden Creatures</a></li>
+		<li><a href="service4.htm" class="nav" accesskey="8" title="Garden Furniture">Garden Furniture</a></li>
+		</ul>
+        <li><a href="bookingform.htm" class="nav" accesskey="3" title="Booking Form">Booking Form</a></li>
+        <li><a href="contact.htm" class="nav" accesskey="4" title="Contact Us">Contact Us</a></li>
+</div ul>			
+<!-- My clock. -->
+<body onload="startTime()">
+<div id="MyClock">
+</div>
+<!-- My clock. -->
+</div>
+
+<div id="MainText">
+
+<div class="img">
+	<a href="services.htm" accesskey="2" title="Services link"><img src="images/3ladybug.jpg" alt="3ladybug.jpg" /></a>
+	<p class="yellow">Not all insects are our gardens enemies, the Lady Bird insect can indeed be highly beneficial to us by preying on other creatures which damage crops or flowers like the Green Flies. We all would prefer the idea of having a wildlife friendly garden and that’s why it’s becoming more popular by the day. There are some real villains like the Vine Weevils and New Zealand Flatworms being the most noted to date. These two add to their dastardliness by the fact that they do not need a mate to reproduce, which means that if only one individual is brought into the garden then they can instantly establish themselves. These are a few new aliens who have been spotted recently in gardens across the UK, they present a massive problem to us with these introduced species that are not part of the existing food chain and not having a natural predator means they can spread quickly. Our biggest defence against them is our climate, which fortunately kills off most of the creatures accidently carried here on plants or in food imports, so we need to be extra vigilant.<br><br>
+	<a href="services.htm" accesskey="2" title="Services link"><img src="images/YellowWaspBug.jpg" alt="Yellow Wasp Bug.jpg" /></a>
+	(B1) Yellow Wasp Killer Spray just £5.00p with a 12 month defence.<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<a href="services.htm" accesskey="2" title="Services link"><img src="images/GreenBug.jpg" alt="Green Bug.jpg" /></a>
+	(B2) Green Bug Killer Spray just £6.00p with a 12 month defence.<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<a href="services.htm" accesskey="2" title="Services link"><img src="images/YellowBug.jpg" alt="Yellow Bug.jpg" /></a>
+	(B3) Yellow Bug Killer Spray just £7.00p with a 12 month defence.<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<a href="services.htm" accesskey="2" title="Services link"><img src="images/thorny_catapillar.jpg" alt="Thorny Catapillar jpg" /></a>
+	(B4) Thorny Caterpillar Killer Spray just £6.50p with a 12 month defence.
+	</p>
+</div>
+
+</div>
+</body>
+</html>

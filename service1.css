@@ -1,0 +1,183 @@
+body {
+	font-family: Verdana, Arial, sans-serif;
+	background-image: url('images/wetgrass.JPG');
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+}   /* Body tag goes first as it is the first thing to get edited. */
+/*-------------------------------------*/
+#Containerwhole {
+	position: absolute;
+	width: 960px;
+	height:1560px;
+	margin: 0px auto;
+	}
+/*-------------------------------------*/
+
+
+/*The @media rule allows different style rules for different media in the same style sheet.*/
+@media screen
+   {
+   p.test {font-family: verdana,sans-serif;font-size:14px;}
+   } /* This tells the browser to display a 14 pixels Verdana font on the screen.*/
+@media print
+   {
+   p.test {font-family: times,serif;font-size:10px;}
+   }   /* But if the page is printed, it will be in a 10 pixels Times font.*/
+@media screen,print
+   {
+   p.test {font-weight: bold;}
+   }   /* The font-weight is set to bold, both on screen and on paper.*/
+ 
+/*---All unorganized links---*/
+ul	{
+	font-weight: bold;
+	list-style-type:none;
+	} 
+	
+a:link {color:#FF0000; text-decoration:none;}    /* unvisited link */
+a:visited {color:#00FF00; text-decoration:none;} /* visited link */
+a:hover {color:#FF00FF; text-decoration:underline;}   /* mouse over link */
+a:active {color:#0000FF; text-decoration:underline;}  /* selected link */
+/*-------------------------------------*/ 
+
+/*---Standard Drop Down Services Menu--*/
+#navbar {
+	margin: 0;
+	padding: 0;
+	height: 1em;
+	position: absolute; /*-----To position it------------------------------------------------------------------------------*/
+	left: 115px;
+	top: 10px;
+	}
+	
+#navbar li {
+	list-style: none;
+	float: left; 
+	}
+#navbar li a {
+	display: block;
+	padding: 3px 8px;
+	background-color: #008000;
+	color: #fff;
+	text-decoration: none; 
+	}
+#navbar li ul {
+	display: none; /*-----To style it----------*/
+	width: 10em; /* Width to help Opera out */
+	background-color: #6B8E23;
+	}
+#navbar li:hover ul {
+	display: block;  /*-----To HOVER style it----------*/
+	position: absolute;
+	margin: 0;
+	padding: 0; 
+	}
+#navbar li:hover li {
+	float: none; 
+	}
+#navbar li:hover li a {
+	background-color: #6B8E23;
+	border-bottom: 1px solid #fff;
+	color: #000; 
+	}
+#navbar li li a:hover {
+	background-color: #32CD32; 
+	}
+/*-------------------------------------*/
+
+/*--Digital Clock--*/
+#MyClock {
+	position: absolute;
+	left: 28px;
+	top: 153px;
+	color:yellow;  
+	background-color:#008000;
+	}
+/*-------------------------------------*/ 
+
+
+/*--middle_box-Tree picture--*/
+.middle_box{
+	position: absolute;
+	left: 200px;
+	top: 2px;
+	width: 710px;
+	margin-right: 75px;
+	height:180px;
+	background:url(images/center_box_bg.gif) no-repeat center;
+	}
+
+/*---Main text box with grey border--*/
+#MainText {
+	position: absolute;
+	left: 225px;
+	top: 180px;
+	width: 630px;
+	height:1330px;
+	margin-right: 75px;
+	padding:10px 10px 10px 10px;
+	border:5px solid gray;
+	margin:0px;
+	background-color:#6B8E23;
+	}
+
+.yellow{
+	color: yellow;
+	font-size:0.875em; /* 14px/16=0.875em */
+	}
+
+div.img img
+	{
+	display:inline;
+	margin:3px;
+	border:1px solid #ffffff;
+	float:left;
+    border:1px solid #ffffff;
+	margin:0px 5px 5px 5px;
+	}
+
+ div.img a:hover img
+   {
+   border:1px solid #0000ff;
+   }
+
+marquee{
+	color:yellow;
+	font-size:0.875em; /* 14px/16=0.875em */
+	}
+ 
+	
+/*-- This is my Heading 1. --*/
+h1 {
+	position: absolute;
+	left: 200px;
+	top: 40px;
+	text-decoration:underline; 
+	color:purple;
+	} 
+/*-------------------------------------*/ 
+
+
+h3 {
+	text-decoration:none;
+	font-weight: bold;
+	color:yellow;
+	text-align:center;
+	}
+
+
+/*---IE6 Hover problem solvent:---*/
+sfHover = function() {
+	var sfEls = document.getElementById("navbar").getElementsByTagName("li");
+	for (var i=0; i<sfEls.length; i++) {
+		sfEls[i].onmouseover=function() {
+			this.className+=" hover";
+		}
+		sfEls[i].onmouseout=function() {
+			this.className=this.className.replace(new RegExp(" hover\\b"), "");
+		}
+	}
+}
+if (window.attachEvent) window.attachEvent("onload", sfHover);
+/*-------------------------------------*/
+
